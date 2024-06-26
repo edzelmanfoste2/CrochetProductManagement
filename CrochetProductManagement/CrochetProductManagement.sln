@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrochetProductManagement", "CrochetProductManagement.csproj", "{2FB8FF55-8B03-4D57-B05E-49D3F614B501}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FB8FF55-8B03-4D57-B05E-49D3F614B501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FB8FF55-8B03-4D57-B05E-49D3F614B501}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FB8FF55-8B03-4D57-B05E-49D3F614B501}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FB8FF55-8B03-4D57-B05E-49D3F614B501}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B75A85F8-792C-4619-AC17-CE28E678A670}
+	EndGlobalSection
+EndGlobal
