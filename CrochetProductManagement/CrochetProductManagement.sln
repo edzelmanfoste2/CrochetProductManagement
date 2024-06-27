@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrochetProductManagement", "CrochetProductManagement.csproj", "{2FB8FF55-8B03-4D57-B05E-49D3F614B501}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrochetProductManagement", "CrochetProductManagement.csproj", "{2FB8FF55-8B03-4D57-B05E-49D3F614B501}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PI_ManagementServices", "..\PI_ManagementBusiness\PI_ManagementServices.csproj", "{B449C0C9-D482-4303-BFB5-370CB011DD16}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PI_ManagamentData", "..\PI_ManagamentData\PI_ManagamentData.csproj", "{D2100252-A734-49D6-98EB-3A2903390B75}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "..\Client\Client.csproj", "{1465C523-B664-4112-B3E1-AF8126E7F3F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PI_API", "..\PI_API\PI_API.csproj", "{CDB9AEFA-2551-478A-B6F3-A98F842F38D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{2FB8FF55-8B03-4D57-B05E-49D3F614B501}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FB8FF55-8B03-4D57-B05E-49D3F614B501}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FB8FF55-8B03-4D57-B05E-49D3F614B501}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B449C0C9-D482-4303-BFB5-370CB011DD16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B449C0C9-D482-4303-BFB5-370CB011DD16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B449C0C9-D482-4303-BFB5-370CB011DD16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B449C0C9-D482-4303-BFB5-370CB011DD16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2100252-A734-49D6-98EB-3A2903390B75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2100252-A734-49D6-98EB-3A2903390B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2100252-A734-49D6-98EB-3A2903390B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2100252-A734-49D6-98EB-3A2903390B75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1465C523-B664-4112-B3E1-AF8126E7F3F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1465C523-B664-4112-B3E1-AF8126E7F3F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1465C523-B664-4112-B3E1-AF8126E7F3F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1465C523-B664-4112-B3E1-AF8126E7F3F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDB9AEFA-2551-478A-B6F3-A98F842F38D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDB9AEFA-2551-478A-B6F3-A98F842F38D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDB9AEFA-2551-478A-B6F3-A98F842F38D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDB9AEFA-2551-478A-B6F3-A98F842F38D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

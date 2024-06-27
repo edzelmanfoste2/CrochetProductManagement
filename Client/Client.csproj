@@ -12,9 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CrochetProductManagement\CrochetProductManagement.csproj" />
     <ProjectReference Include="..\PI_ManagamentData\PI_ManagamentData.csproj" />
     <ProjectReference Include="..\PI_ManagementBusiness\PI_ManagementServices.csproj" />
-    <ProjectReference Include="..\ProductInventoryManagement\ProductInventoryManagementModel.csproj" />
   </ItemGroup>
 
 </Project>
