@@ -38,7 +38,7 @@ namespace PI_ManagamentData
 
         public int DeleteProducts(CrochetProducts products)
         {
-            return sqlData.DeleteProducts(products.ID);
+            return sqlData.DeleteProducts(products.name);
         }
     }
 }

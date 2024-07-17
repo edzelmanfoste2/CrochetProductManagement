@@ -51,5 +51,19 @@ namespace PI_API.Controllers
 
             return new JsonResult(result);
         }
+
+        [HttpDelete]
+        public JsonResult DeleteProduct(CrochetProduct produceCrochet)
+        {
+
+            var deleteProduce = new ProductInventoryManagementModel.CrochetProducts
+            {
+                name = produceCrochet.name
+            };
+
+            var result = _productServices.DeleteProducts(deleteProduce);   
+
+            return new JsonResult(result);
+        }
     }
 }

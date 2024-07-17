@@ -88,11 +88,13 @@ namespace ProductInventoryManagementModel
             return success;
         }
 
-        public int UpdateProducts(string ID, string name, string productType, string availability, string description, string category, string material, string size)
+        public int UpdateProducts(string ID, string name, string ProductType, string availability, string description, string category, string material, string size)
         {
             int success;
 
-            string updateStatement = $"UPDATE Tbl_CrochetProduct SET ID = @ID, name = @Name, productType = @Product_Type, availability = @Availability, description = @Description, category = @Category, material = @Material, size = @Size WHERE name = @Name";
+            //string updateStatement = $"UPDATE Tbl_CrochetProduct SET ID = @ID, name = @Name, productType = @Product_Type, availability = @Availability, description = @Description, category = @Category, material = @Material, size = @Size WHERE name = @Name";
+            //string updateStatement =$"update Tbl_CrochetProduct set availability = @Availability where ID = @ID";
+            string updateStatement = $"update Tbl_CrochetProduct set ID = @ID, name = @Name, availability = @Availability where ID = @ID";
             SqlCommand updateCommand = new SqlCommand(updateStatement, sqlConnection);
             sqlConnection.Open();
 
@@ -101,12 +103,12 @@ namespace ProductInventoryManagementModel
 
             updateCommand.Parameters.AddWithValue("@ID", ID);
             updateCommand.Parameters.AddWithValue("@Name", name);
-            updateCommand.Parameters.AddWithValue("@Product_Type", productType);
+            //updateCommand.Parameters.AddWithValue("@Product_Type", ProductType);
             updateCommand.Parameters.AddWithValue("@Availability", availability);
-            updateCommand.Parameters.AddWithValue("@Description", description);
-            updateCommand.Parameters.AddWithValue("@Category", category);
-            updateCommand.Parameters.AddWithValue("@Material", material);
-            updateCommand.Parameters.AddWithValue("@Size", size);
+            //updateCommand.Parameters.AddWithValue("@Description", description);
+            //updateCommand.Parameters.AddWithValue("@Category", category);
+            //updateCommand.Parameters.AddWithValue("@Material", material);
+            //updateCommand.Parameters.AddWithValue("@Size", size);
 
             success = updateCommand.ExecuteNonQuery();
 
