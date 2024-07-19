@@ -14,7 +14,7 @@ namespace ProductInventoryManagementModel
         //string connectionString
         //= "Data Source =MANFOSTE\\SQLEXPRESS01; Initial Catalog = CrochetManagement; Integrated Security = True;";
 
-        //  string connectionString
+        // string connection
         //= "Data Source =ROSWELL\\SQLEXPRESS01; Initial Catalog = CrochetManagement; Integrated Security = True;";
 
 
@@ -100,9 +100,9 @@ namespace ProductInventoryManagementModel
         {
             int success;
 
-            //string updateStatement = $"UPDATE Tbl_CrochetProduct SET ID = @ID, name = @Name, productType = @ProductType, availability = @Availability, description = @Description, category = @Category, material = @Material, size = @Size WHERE name = @Name";
+            string updateStatement = $"UPDATE Tbl_CrochetProduct SET ID = @ID, name = @Name, ProductType = @ProductType, availability = @Availability, description = @Description, category = @Category, material = @Material, size = @Size WHERE ID = @ID";
             //string updateStatement =$"update Tbl_CrochetProduct set availability = @Availability where ID = @ID";
-            string updateStatement = $"update Tbl_CrochetProduct set ID = @ID, name = @Name, ProductType = @ProductType, availability = @Availability where ID = @ID";
+            //string updateStatement = $"update Tbl_CrochetProduct set ID = @ID, name = @Name, ProductType = @ProductType, availability = @Availability where ID = @ID";
             SqlCommand updateCommand = new SqlCommand(updateStatement, sqlConnection);
             sqlConnection.Open();
 
@@ -113,10 +113,10 @@ namespace ProductInventoryManagementModel
             updateCommand.Parameters.AddWithValue("@Name", name);
             updateCommand.Parameters.AddWithValue("@ProductType", ProductType);
             updateCommand.Parameters.AddWithValue("@Availability", availability);
-            //updateCommand.Parameters.AddWithValue("@Description", description);
-            //updateCommand.Parameters.AddWithValue("@Category", category);
-            //updateCommand.Parameters.AddWithValue("@Material", material);
-            //updateCommand.Parameters.AddWithValue("@Size", size);
+            updateCommand.Parameters.AddWithValue("@Description", description);
+            updateCommand.Parameters.AddWithValue("@Category", category);
+            updateCommand.Parameters.AddWithValue("@Material", material);
+            updateCommand.Parameters.AddWithValue("@Size", size);
 
             success = updateCommand.ExecuteNonQuery();
 

@@ -58,7 +58,7 @@ namespace PI_API.Controllers
 
             var deleteProduce = new ProductInventoryManagementModel.CrochetProducts
             {
-                name = produceCrochet.name
+                ID = produceCrochet.ID
             };
 
             var result = _productServices.DeleteProducts(deleteProduce);   
