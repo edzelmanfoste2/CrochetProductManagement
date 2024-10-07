@@ -5,6 +5,7 @@ using PI_ManagamentData;
 using PI_ManagementServices;
 using PI_API;
 
+
 namespace PI_API.Controllers
 {
     [ApiController]
@@ -13,11 +14,14 @@ namespace PI_API.Controllers
     {
         GetProducts _getProducts;
         ProductsServices _productServices;
+        MailSet _mailset;
+        
 
         public CrochetManagementController()
         {
             _getProducts = new GetProducts();
             _productServices = new ProductsServices();
+            _mailset = new MailSet();
         }
 
         [HttpGet]
@@ -39,8 +43,11 @@ namespace PI_API.Controllers
         [HttpPost]
         public JsonResult AddProduct(CrochetProduct produceCrochet)
         {
+            //var mailset = _mailset;
+
             var result = _productServices.CreateProducts(produceCrochet.ID, produceCrochet.name, produceCrochet.productType, produceCrochet.availability, produceCrochet.description, produceCrochet.category, produceCrochet.material, produceCrochet.size);
 
+            var mailset = _mailset.MailSet1;
             return new JsonResult(result);
         }
 
@@ -49,6 +56,7 @@ namespace PI_API.Controllers
         {
             var result = _productServices.UpdateProducts(produceCrochet.ID, produceCrochet.name, produceCrochet.productType, produceCrochet.availability, produceCrochet.description, produceCrochet.category, produceCrochet.material, produceCrochet.size);
 
+            var mailset = _mailset.MailSet2;
             return new JsonResult(result);
         }
 

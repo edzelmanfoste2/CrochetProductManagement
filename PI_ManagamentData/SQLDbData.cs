@@ -14,11 +14,11 @@ namespace ProductInventoryManagementModel
         //string connectionString
         //= "Data Source =MANFOSTE\\SQLEXPRESS01; Initial Catalog = CrochetManagement; Integrated Security = True;";
 
-        // string connection
-        //= "Data Source =ROSWELL\\SQLEXPRESS01; Initial Catalog = CrochetManagement; Integrated Security = True;";
+        string connection
+        = "Data Source =ROSWELL\\SQLEXPRESS01; Initial Catalog = CrochetManagement; Integrated Security = True;";
 
 
-        string connection = "Server =tcp:20.2.234.76,1433; Database = CrochetManagement; User Id =sa; Password = Manfoste12345;";
+        //string connection = "Server =tcp:20.2.234.76,1433; Database = CrochetManagement; User Id =sa; Password = Manfoste12345;";
 
         SqlConnection sqlConnection;
 

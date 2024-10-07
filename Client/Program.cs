@@ -28,7 +28,8 @@ namespace Client
                 Console.WriteLine(product.size);
             }*/
 
-            var message = new MimeMessage();
+
+            /*var message = new MimeMessage();
             message.From.Add(new MailboxAddress("Testing1", "do-not-reply@frommynotes.com"));
             message.To.Add(new MailboxAddress("User", "user@example.com"));
             message.Subject = "Thanks for suscribing!";
@@ -58,10 +59,10 @@ namespace Client
                 finally
                 {
                     client.Disconnect(true);
-                }
+                }*/
 
 
             }
         }
     }
-}
+
