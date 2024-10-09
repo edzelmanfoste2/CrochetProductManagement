@@ -8,7 +8,6 @@ namespace ProductInventoryManagementModel
 {
     public class CrochetProducts
     {
-        public string ID;
         public string name;
         public string productType;
         public string availability;
