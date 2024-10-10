@@ -131,9 +131,10 @@ namespace ProductInventoryManagementModel
 
             string deleteStatement = $"DELETE FROM Tbl_CrochetProduct WHERE ID = @ID";
             SqlCommand deleteCommand = new SqlCommand(deleteStatement, sqlConnection);
+            deleteCommand.Parameters.AddWithValue("@ID", ID);
             sqlConnection.Open();
 
-            deleteCommand.Parameters.AddWithValue("@ID", ID);
+            //deleteCommand.Parameters.AddWithValue("@ID", ID);
 
             success = deleteCommand.ExecuteNonQuery();
 

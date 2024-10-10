@@ -62,25 +62,31 @@ namespace PI_ManagementServices
         }
 
 
-        public void addedProduct(CrochetProducts crochetProducts, string ID, string name)
+        public void addedProduct(string name)
         {
             string emailSub = "Eumoirous, a new product ADDED!";
             string htmlBod = "<h1>Product is successfully uploaded in your shop!</h1>" + "<br>"
-                + $"<p>Product ID: {crochetProducts.ID}</p>"
-                + $"<p>Product Name: {crochetProducts.name}</p>"
                 + "<p> The product you have updated is successfully stored.</p>";
 
             EmailNotification(htmlBod, emailSub);
 
         }
 
-        public void updateProduct(CrochetProducts crochetProducts, string ID, string name)
+        public void updateProduct(string name)
         {
             string emailSub = "Eumoirous Product Updated";
             string htmlBod = "<h1>Product is successfully updated in your shop!</h1>" + "<br>"
-                + $"<p>Product ID: {crochetProducts.ID}</p>"
-                + $"<p>Product Name: {crochetProducts.name}</p>"
                 + "<p> The product you have updated is successfully stored.</p>";
+
+            EmailNotification(htmlBod, emailSub);
+
+        }
+
+        public void deleteProduct(string ID)
+        {
+            string emailSub = "Eumoirous Product Deleted";
+            string htmlBod = "<h1>Product is successfully deleted.</h1>" + "<br>"
+                + "<p> The product you have deleted is successfully stored.</p>";
 
             EmailNotification(htmlBod, emailSub);
 

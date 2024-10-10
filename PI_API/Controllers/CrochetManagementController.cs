@@ -51,7 +51,7 @@ namespace PI_API.Controllers
 
             if (result)
             {
-                _mailset.addedProduct(produceCrochet., produceCrochet.ID, produceCrochet.name);
+                _mailset.addedProduct(produceCrochet.name);
             }
             return new JsonResult(result);
         }
@@ -61,7 +61,10 @@ namespace PI_API.Controllers
         {
             var result = _productServices.UpdateProducts(produceCrochet.ID, produceCrochet.name, produceCrochet.productType, produceCrochet.availability, produceCrochet.description, produceCrochet.category, produceCrochet.material, produceCrochet.size);
 
-            var mailset = _mailset.updateProduct;
+            if (result)
+            {
+                _mailset.updateProduct(produceCrochet.name);
+            }
             return new JsonResult(result);
         }
 
@@ -74,7 +77,14 @@ namespace PI_API.Controllers
                 ID = produceCrochet.ID
             };
 
-            var result = _productServices.DeleteProducts(deleteProduce);   
+            var result = _productServices.DeleteProducts(deleteProduce);
+
+            if (result)
+            {
+                _mailset.deleteProduct(produceCrochet.ID);
+            }
+
+            //var result = _productServices.DeleteProducts(deleteProduce);   
 
             return new JsonResult(result);
         }

@@ -15,5 +15,8 @@ namespace ProductInventoryManagementModel
         public string category;
         public string material;
         public string size;
+
+        //public string ID { get; set; }
+        public string ID;
     }
 }
