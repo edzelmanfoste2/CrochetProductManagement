@@ -125,13 +125,18 @@ namespace ProductInventoryManagementModel
             return success;
         }
 
-        public int DeleteProducts(string ID)
+        public int DeleteProducts(string name)
         {
             int success;
 
-            string deleteStatement = $"DELETE FROM Tbl_CrochetProduct WHERE ID = @ID";
+            //string deleteStatement = $"DELETE FROM Tbl_CrochetProduct WHERE ID =@ID";
+            //SqlCommand deleteCommand = new SqlCommand(deleteStatement, sqlConnection);
+            //deleteCommand.Parameters.AddWithValue("@ID", ID);
+            //sqlConnection.Open();
+
+            string deleteStatement = $"DELETE FROM Tbl_CrochetProduct WHERE name =@Name";
             SqlCommand deleteCommand = new SqlCommand(deleteStatement, sqlConnection);
-            deleteCommand.Parameters.AddWithValue("@ID", ID);
+            deleteCommand.Parameters.AddWithValue("@name", name);
             sqlConnection.Open();
 
             //deleteCommand.Parameters.AddWithValue("@ID", ID);

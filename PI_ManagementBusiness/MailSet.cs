@@ -82,7 +82,7 @@ namespace PI_ManagementServices
 
         }
 
-        public void deleteProduct(string ID)
+        public void deleteProduct(string name)
         {
             string emailSub = "Eumoirous Product Deleted";
             string htmlBod = "<h1>Product is successfully deleted.</h1>" + "<br>"
