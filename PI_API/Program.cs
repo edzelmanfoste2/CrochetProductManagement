@@ -1,6 +1,7 @@
 using PI_ManagementServices;
 using PI_ManagamentData;
 using ProductInventoryManagementModel;
+using Amazon.S3;
 
 namespace PI_API
 {
@@ -18,6 +19,8 @@ namespace PI_API
             builder.Services.AddSwaggerGen();
             builder.Services.AddScoped<ProductsServices>();
             builder.Services.AddScoped<SQLDbData>();
+            builder.Services.AddDefaultAWSOptions(builder.Configuration.GetAWSOptions());
+            builder.Services.AddAWSService<IAmazonS3>();
 
             var app = builder.Build();
 
